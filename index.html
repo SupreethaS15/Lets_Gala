@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Let's Gala — Redefined</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+
+  <!-- 🔹 NAVBAR -->
+  <header class="navbar">
+    <div class="logo">Let'sGala</div>
+    <nav class="nav-links" id="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#" id="loginBtn">Login</a>
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <button id="darkToggle" class="dark-toggle">🌙</button>
+  </header>
+
+  <!-- 🔹 HERO VIDEO BACKGROUND -->
+  <section class="hero" id="home">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="assets/video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay">
+      <div class="hero-text" data-aos="fade-up">
+        <h1>Welcome to Let's Gala 🎉</h1>
+        <p>Unite. Celebrate. Experience. Events Reimagined.</p>
+        <a href="#features" class="cta-btn">Explore Features</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 ABOUT -->
+  <section class="section" id="about">
+    <h2 data-aos="fade-up">What is Let's Gala?</h2>
+    <p data-aos="fade-up" data-aos-delay="100">
+      Let's Gala transforms how we attend, host, and experience events. Discover the joy of connection and celebration in every click.
+    </p>
+  </section>
+
+   <!-- 🔹 FEATURES -->
+   <section class="features-section" id="features">
+    <h2 class="section-title" data-aos="fade-up">Everything You Need</h2>
+
+    <!-- Feature 1 -->
+    <div class="feature-block" data-aos="fade-right">
+      <div class="feature-img">
+        <img src="assets/ballon.png" alt="Discover Events" />
+      </div>
+      <div class="feature-content">
+        <h3>Discover Events Effortlessly</h3>
+        <p>From concerts to conferences, find tailored events based on your vibe, location, and interests.</p>
+        <a href="events.html" class="cta-btn">Browse Events</a>
+      </div>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="feature-block reverse" data-aos="fade-left">
+      <div class="feature-img">
+        <img src="assets/people.png" alt="Connect with People" />
+      </div>
+      <div class="feature-content">
+        <h3>Build Real Connections</h3>
+        <p>Engage with fellow attendees, share your experiences, and grow your network with chat, profiles, and invites.</p>
+        <a href="meet.html" class="cta-btn">Meet People</a>
+      </div>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="feature-block" data-aos="fade-right">
+      <div class="feature-img">
+        <img src="assets/decor2.png" alt="Host Events" />
+      </div>
+      <div class="feature-content">
+        <h3>Host Powerful Events</h3>
+        <p>Create and manage your events with beautiful pages, RSVP, analytics, and real-time engagement tools.</p>
+        <a href="host.html" class="cta-btn">Start Hosting</a>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- 🔐 LOGIN MODAL -->
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" id="closeLogin">&times;</span>
+      <h2>Login to Let's Gala</h2>
+      <form class="login-form" id="loginForm">
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit" class="cta-btn">Login</button>
+        <p id="loginMsg" class="success-msg"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- 🔹 FOOTER SECTION -->
+<footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Let's Gala</h3>
+        <p>&copy; 2025 All rights reserved.</p>
+      </div>
+  
+      <div>
+        <h4>Contact Info</h4>
+        <p>📞 +1 (555) 123-4567</p>
+        <p>📍 42 Gala Street, New York, NY</p>
+        <p>✉️ support@letsgala.com</p>
+      </div>
+  
+      <!-- CONNECT WITH US FORM -->
+      <div class="footer-form">
+        <h4>Connect With Us</h4>
+        <form id="connectForm">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea rows="3" placeholder="Your Message" required></textarea>
+          <button type="submit" class="cta-btn">Send</button>
+          <p id="connectMsg" class="success-msg"></p>
+        </form>
+      </div>
+    </div>
+  </footer>
+  
+
+  <!-- 🔹 SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="script.js"></script>
+</body>
+</html>

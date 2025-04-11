@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Event | Let's Gala</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Let'sGala</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+    </nav>
+    <button id="darkToggle" class="dark-toggle">🌙</button>
+  </header>
+
+  <section class="section" id="book">
+    <h2>Book Your Spot 🎫</h2>
+    <p>Please fill out the form below to reserve your entry.</p>
+
+    <form class="booking-form">
+      <input type="text" placeholder="Your Full Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="number" placeholder="Number of Tickets" required />
+      <select required>
+        <option value="">Choose Event Type</option>
+        <option value="music">Music & Concert</option>
+        <option value="business">Business & Tech</option>
+        <option value="art">Art & Culture</option>
+      </select>
+      <button type="submit" class="cta-btn">Confirm Booking</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Let's Gala. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

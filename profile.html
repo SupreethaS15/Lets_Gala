@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Profile | Let's Gala</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .profile-banner {
+      background: url('assets/banner.jpg') no-repeat center center/cover;
+      height: 220px;
+      position: relative;
+    }
+
+    .profile-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: -80px;
+      padding: 0 10%;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      background-color: #eee;
+    }
+
+    .profile-info {
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    .profile-info h1 {
+      font-size: 2rem;
+      margin-bottom: 6px;
+    }
+
+    .profile-info h3 {
+      font-weight: normal;
+      color: #777;
+    }
+
+    .profile-meta {
+      margin-top: 12px;
+      font-size: 0.95rem;
+      color: #888;
+    }
+
+    .btn-group {
+      margin-top: 16px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-group .cta-btn {
+      padding: 10px 20px;
+    }
+
+    .profile-section {
+      padding: 60px 10%;
+    }
+
+    .profile-section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+    }
+
+    .experience, .skills {
+      margin-top: 30px;
+    }
+
+    .experience-item {
+      margin-bottom: 24px;
+    }
+
+    .experience-item h4 {
+      margin: 0;
+      color: #3A5AFF;
+    }
+
+    .experience-item p {
+      margin-top: 6px;
+      color: #555;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skills-list span {
+      background: #f1f5ff;
+      color: #3A5AFF;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    body.dark .profile-info h3,
+    body.dark .profile-meta,
+    body.dark .experience-item p {
+      color: #bbb;
+    }
+
+    body.dark .skills-list span {
+      background: #2b2b2b;
+      color: #7ea7ff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 NAV -->
+  <header class="navbar">
+    <div class="logo">Let'sGala</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="profile.html" class="active">Profile</a>
+    </nav>
+    <button id="darkToggle" class="dark-toggle">🌙</button>
+  </header>
+
+  <!-- 🔹 PROFILE HEADER -->
+  <div class="profile-banner"></div>
+
+  <div class="profile-box">
+    <img src="assets/profile.png" alt="Your Picture" class="profile-img" />
+    <div class="profile-info">
+      <h1>Supreetha S</h1>
+      <h3>Tech Aspiriant|Full Stack Developer|AI/ML Enthusiast</h3>
+      <div class="profile-meta">📍 Coimbatore · 📧 supreetha1512@gmail.com</div>
+    </div>
+    <div class="btn-group">
+      <a href="mailto:supreetha1512@gmail.com" class="cta-btn">Message</a>
+      <a href="#" class="cta-btn">Download Resume</a>
+    </div>
+  </div>
+
+  <!-- 🔹 PROFILE SECTIONS -->
+  <section class="profile-section">
+    <h2>About</h2>
+    <p>
+        Im a tech enthusiast who loves creating clean, user-friendly websites. I enjoy working on real projects, learning new tools, and turning ideas into interactive experiences. Always curious, always building.
+    </p>
+
+    <div class="experience">
+      <h2>Projects</h2>
+      <div class="experience-item">
+        <h4>Project Title</h4>
+        <small>Jan 2023 – Present · Full Time</small>
+        <p>Brief description of your responsibilities, tech used, and impact you had.</p>
+      </div>
+      <div class="experience-item">
+        <h4>Project Title</h4>
+        <small>Aug 2020 – Dec 2022</small>
+        <p>Another short explanation of what you achieved or built.</p>
+      </div>
+    </div>
+
+    <div class="skills">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>UI/UX</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 Let's Gala. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const darkToggle = document.getElementById('darkToggle');
+    darkToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('darkMode', document.body.classList.contains('dark'));
+    });
+
+    // Load theme on load
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark');
+      }
+    });
+  </script>
+</body>
+</html>
